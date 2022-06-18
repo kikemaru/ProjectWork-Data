@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="./web/css/bootstrap.min.css" rel="stylesheet">
+    <title>Установка</title>
+</head>
+<body>
+<center style="margin-top: 30px;">
+    <h4>Пройдите процедуру установки:</h4>
+    <small>Введите все необходимые данные -></small><br><br>
+    <form method="GET" action="./system/installer/installer.php">
+        <table style="max-width: 600px;" class="table table-bordered">
+            <thead>
+            <th>Настройка БД (MySQL)</th>
+            <th>Настройка пользователя</th>
+            </thead>
+            <tbody>
+            <td>
+                <p>HOST: <input class="form-control" type="text" name="host" required ></p>
+                <p>DataBase name: <input class="form-control" type="text" name="dbname" required ></p>
+                <p>User: <input class="form-control" type="text" name="user" required ></p>
+                <p>Password: <input class="form-control" type="text" name="pass" required ></p>
+            </td>
+            <td>
+                <p>Логин: <input class="form-control" type="text" name="login" required ></p>
+                <p>Пароль: <input class="form-control" type="text" name="password" required ></p>
+                <strong>Эти данные будут использоваться<br> для авторизации на сайте в<br> дальнейшем!</strong><br>
+                <font color="red">Будьте внимательны! Изменить данную<br> информацию потом не представляется возможным</font>
+            </td>
+            </tbody>
+        </table>
+        <input type="submit" value="Установить ->" class="btn btn-success" style="width: 600px;">
+    </form>
+</center>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="./web/js/bootstrap.min.js"></script>
+</body>
+</html>
