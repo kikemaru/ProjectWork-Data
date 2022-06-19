@@ -1,1 +1,5 @@
-empty
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([a-zA-Z-_0-9]*).gif$ code.php?alias=$1 [E=qs:%{QUERY_STRING},L,QSA]
