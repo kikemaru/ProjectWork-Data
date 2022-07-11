@@ -1,7 +1,15 @@
 <?php
-$file = file_get_contents("./system/data/data.json");
-if (!empty($file)){
-    include './pages/auth.html';
-} else {
-    include './pages/main.html';
-}
+//$start = null;
+$router = null; $page = null;
+session_start();
+//$_SESSION['test'] = 'roma';
+include_once './include/require.php';
+
+//$test = [
+//    'login' => 'admin',
+//    'pass' => 'root'
+//];
+$router->Head();
+$router->Router($page);
+$router->Footer();
+
