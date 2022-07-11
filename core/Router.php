@@ -41,6 +41,14 @@ class Router
 //        echo '<title>'.$title.'</title>';
 //    }
 
+
+    /*
+     * Методы для создания страниц
+     * Расположены в классе Router потому что каждая страница
+     * вызывается в данном классе и максимальный простой вариант
+     * обращения к методам - обращение к методам этого класса
+     */
+
     public function Head()
     {
         echo '<!DOCTYPE html>
@@ -109,6 +117,32 @@ class Router
         } else {
             echo '<li><a href="./?page=' . $page . '">' . $title . '</a></li>';
         }
+    }
+
+
+    public function CreateForm($type, $action)
+    {
+        echo '
+        <form method="'.$type.'" action="./">
+        <input type="hidden" name="action" value="'.$action.'">
+        ';
+    }
+
+    public function AddInput($type, $name, $placeholder, $class, $width)
+    {
+        echo '
+        <p><input type="'.$type.'" name="'.$name.'" class="'.$class.'" id="inputSuccess1" style="max-width: '.$width.'px;" placeholder="'.$placeholder.'"></p>
+        ';
+    }
+
+    public function AddButton($value, $class, $width)
+    {
+        echo '<p><input type="submit" value="'.$value.'" class="'.$class.'" style="width: '.$width.'px;"></p>';
+    }
+
+    public function EndForm()
+    {
+        echo '</form>';
     }
 
 }
