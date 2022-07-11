@@ -1,2 +1,6 @@
-<?php $this->title('main'); ?>
-<h1>hello</h1>
+<?php $this->title('Авторизация'); ?>
+<center>
+    <form>
+        <input type="text">
+    </form>
+</center>
