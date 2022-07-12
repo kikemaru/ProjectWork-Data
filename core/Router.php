@@ -5,6 +5,7 @@ class Router
 
     private $rout;
     public $title;
+    public $page;
 
     public function __construct($rout = null)
     {
@@ -13,6 +14,7 @@ class Router
 
     public function Router($page, $param = null)
     {
+        $this->page = $page;
 
         if (!empty($param)){
             $url = http_build_query($param);
