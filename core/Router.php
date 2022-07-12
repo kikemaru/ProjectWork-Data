@@ -147,4 +147,10 @@ class Router
         echo '</form>';
     }
 
+    public function CheckAuth()
+    {
+        if (isset($_SESSION['login']))
+            header("location: ./?page=private");
+    }
+
 }
