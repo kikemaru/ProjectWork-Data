@@ -11,5 +11,6 @@ include_once './include/require.php';
 //];
 $router->Head();
 $router->Router($page);
+include_once './controller/'.$router->controller.'Controller.php';
 $router->Footer();
 

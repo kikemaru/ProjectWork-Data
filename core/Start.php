@@ -25,7 +25,7 @@ class Start
 
     public function Hash($string)
     {
-        return md5($this->Clear($string));
+        return md5($string);
     }
 
 

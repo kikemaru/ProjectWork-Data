@@ -20,5 +20,5 @@ $page = $_GET['page'];
 //$getarray = $_GET['param'];
 
 $rout = [
-    'main', 'private', 'auth', '', 'ban'
+    'main', 'private', 'auth', '', 'ban', 'log'
 ];
