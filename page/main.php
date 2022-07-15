@@ -1,5 +1,6 @@
 <?php $this->title('Авторизация');
-$this->CheckAuth();?>
+$this->Controller('main');
+//$this->CheckAuth();?>
 <center style="margin-top: 40px;">
     <h3>Авторизация:</h3>
     <?php
