@@ -6,6 +6,7 @@ class Router
     private $rout;
     public $title;
     public $page;
+    public $controller;
 
     public function __construct($rout = null)
     {
@@ -152,5 +153,16 @@ class Router
         if (isset($_SESSION['login']))
             header("location: ./?page=private");
     }
+
+
+    public function Controller($controller)
+    {
+        $this->controller = $controller;
+    }
+
+//    public function SetController()
+//    {
+//        return require './controller/'.$this->controller.'Controller.php';
+//    }
 
 }
